@@ -20,6 +20,14 @@
   margin: 0;
 }
 
+
+.container {
+  width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
 /* header */
 .list {
   list-style: none;
