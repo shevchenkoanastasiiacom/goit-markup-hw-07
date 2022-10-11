@@ -1,0 +1,263 @@
+:root {
+  --color-primary: #000000;
+  --color-brand: #2196f3;
+  --color-accent: #212121;
+  --color-grey: #757575;
+  --color-main-bcg: #ffffff;
+  --color-secondary-bcg: #2f303a;
+  --color-portfolio-page-bcg: #f5f5f5;
+  --color-portfolio-button: #188ce8;
+  --color-portfolio-button-hover: #f5f4fa;
+  --color-down-contacts: rgba(255, 255, 255, 0.6);
+}
+
+.body {
+  color: var(--color-primary);
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  line-height: 1.714;
+  background-color: var(--color-main-bcg);
+}
+
+/* header */
+.list {
+  list-style: none;
+}
+.logo {
+  color: currentColor;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.192;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+
+.logo-blue {
+  color: var(--color-brand);
+}
+
+.link {
+  color: var(--color-accent);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.142;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.link:hover,
+.link:focus {
+  color: var(--color-brand);
+}
+
+.link.current {
+  color: var(--color-brand);
+}
+
+.contacts {
+  color: var(--color-grey);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.142;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.contacts:hover,
+.contacts:focus {
+  color: var(--color-brand);
+}
+
+/* main */
+.dark-section {
+  color: var(--color-main-bcg);
+  text-decoration: none;
+  background-color: var(--color-secondary-bcg);
+}
+
+.main-text {
+  color: var(--color-main-bcg);
+  font-style: normal;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.363;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.primary-button {
+  color: var(--color-main-bcg);
+  background-color: var(--color-brand);
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+}
+
+.primary-button:hover,
+.primary-button:focus {
+  color: var(--color-main-bcg);
+  background-color: var(--color-portfolio-button);
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.advantages-head {
+  color: var(--color-accent);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.166;
+  letter-spacing: 0.03em;
+}
+
+.advantages-list {
+  color: var(--color-accent);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.142;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.advantages-text {
+  color: var(--color-grey);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+}
+
+.group {
+  background-color: var(--color-portfolio-page-bcg);
+}
+
+.li {
+  background-color: var(--color-main-bcg);
+}
+
+.full-name {
+  color: var(--color-accent);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.171;
+  letter-spacing: 0.03em;
+}
+
+.title-name {
+  color: var(--color-grey);
+  font-size: 16px;
+  line-height: 1.171;
+  letter-spacing: 0.03em;
+}
+
+.footer {
+  background-color: var(--color-secondary-bcg);
+}
+
+.down-logo {
+  color: var(--color-main-bcg);
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.192;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+}
+
+.address {
+  color: var(--color-main-bcg);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.address:hover,
+.address:focus {
+  color: var(--color-brand);
+}
+
+/* portfolio */
+.nav-button {
+  background-color: var(--color-portfolio-button-hover);
+  color: var(--color-accent);
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.625;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+}
+.nav-button:hover,
+.nav-button:focus {
+  color: var(--color-main-bcg);
+  background-color: var(--color-brand);
+}
+
+.list-button {
+  background-color: var(--color-main-bcg);
+}
+
+.name-photo {
+  color: var(--color-accent);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.text {
+  color: var(--color-grey);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.875;
+  letter-spacing: 0.03em;
+}
+
+/* footer */
+.down-contacts {
+  color: var(--color-down-contacts);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.down-contacts:hover,
+.down-contacts:focus {
+  color: var(--color-brand);
+}
+
+/* end */
