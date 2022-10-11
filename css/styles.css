@@ -17,12 +17,13 @@
   font-size: 14px;
   line-height: 1.714;
   background-color: var(--color-main-bcg);
+  margin: 0;
 }
 
 /* header */
 .list {
   list-style: none;
-}
+}  
 .logo {
   color: currentColor;
   font-family: 'Raleway', sans-serif;
