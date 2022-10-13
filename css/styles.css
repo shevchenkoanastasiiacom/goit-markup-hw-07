@@ -10,6 +10,15 @@
   --color-portfolio-button-hover: #f5f4fa;
   --color-down-contacts: rgba(255, 255, 255, 0.6);
 }
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+::after {
+  box-sizing: inherit;
+}
 
 .body {
   color: var(--color-primary);
@@ -20,7 +29,19 @@
 }
 
 /* header */
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+
+  outline: 2px solid tomato;
+}
+
 .list {
+  padding: 0;
+  margin: 0;
+
   list-style: none;
 }
 .logo {
@@ -75,13 +96,24 @@
 }
 
 /* main */
+
+.main {
+  text-align: center;
+}
+
 .dark-section {
+margin-top: 0;
+margin-bottom: 94px;
+
   color: var(--color-main-bcg);
   text-decoration: none;
   background-color: var(--color-secondary-bcg);
 }
 
 .main-text {
+  margin-top: 0;
+  margin-bottom: 30px;
+
   color: var(--color-main-bcg);
   font-style: normal;
   font-weight: 900;
@@ -89,6 +121,8 @@
   line-height: 1.363;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  outline: 2px solid tomato;
 }
 
 .primary-button {
@@ -101,6 +135,7 @@
   line-height: 1.875;
   letter-spacing: 0.06em;
   cursor: pointer;
+  border-radius: 4px;
 }
 
 .primary-button:hover,
@@ -123,6 +158,9 @@
 }
 
 .advantages-head {
+  margin-top: 0;
+  margin-bottom: 50px;
+
   color: var(--color-accent);
   font-style: normal;
   font-weight: 700;
@@ -130,8 +168,23 @@
   line-height: 1.166;
   letter-spacing: 0.03em;
 }
+.advantages-head.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
 
 .advantages-list {
+  margin-top: 0;
+  margin-bottom: 10px;
+
   color: var(--color-accent);
   font-style: normal;
   font-weight: 700;
@@ -142,6 +195,9 @@
 }
 
 .advantages-text {
+  margin-top: 0;
+  margin-bottom: 94px;
+
   color: var(--color-grey);
   font-style: normal;
   font-weight: 400;
@@ -167,6 +223,9 @@
 }
 
 .title-name {
+margin-top: 0;
+margin-bottom: 30px;
+
   color: var(--color-grey);
   font-size: 16px;
   line-height: 1.171;
@@ -206,6 +265,12 @@
 
 /* portfolio */
 .nav-button {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 6px 22px;
+  min-width: 125px;
+  border: 1px solid transparent;
+
   background-color: var(--color-portfolio-button-hover);
   color: var(--color-accent);
   font-family: inherit;
@@ -215,6 +280,7 @@
   line-height: 1.625;
   letter-spacing: 0.03em;
   cursor: pointer;
+  text-align: center;
 }
 .nav-button:hover,
 .nav-button:focus {
@@ -227,6 +293,9 @@
 }
 
 .name-photo {
+  margin-top: 0;
+  margin-bottom: 0;
+
   color: var(--color-accent);
   font-style: normal;
   font-weight: 700;
@@ -235,6 +304,9 @@
   letter-spacing: 0.06em;
 }
 .text {
+  margin-top: 0;
+  margin-bottom: 0;
+
   color: var(--color-grey);
   font-style: normal;
   font-weight: 400;
