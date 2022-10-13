@@ -301,7 +301,7 @@ margin-bottom: 30px;
 
 .name-photo {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 4px;
 
   color: var(--color-accent);
   font-style: normal;
