@@ -107,7 +107,7 @@ text-align: center;
 
 .dark-section {
 margin-top: 0;
-margin-bottom: 94px;
+margin-bottom: 0;
 
   color: var(--color-main-bcg);
   text-decoration: none;
