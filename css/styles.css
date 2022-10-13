@@ -130,6 +130,12 @@ margin-bottom: 0;
 }
 
 .primary-button {
+  display: inline-block;
+  border-radius: 4px;
+  padding: 32px 10px;
+  min-width: 216px;
+  border: 1px solid transparent;
+
   color: var(--color-main-bcg);
   background-color: var(--color-brand);
   font-family: inherit;
