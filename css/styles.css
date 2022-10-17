@@ -30,21 +30,52 @@ html {
 
 /* header */
 
+ul {
+  list-style: none;
+}
+
 .container {
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
-
-  outline: 2px solid tomato;
+  width: 1170px;
 }
 
-.list {
+.container.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+.list-nav {
   display: flex;
   padding: 0;
   margin: 0;
-
-  list-style: none;
+  margin-left: 93px;
 }
+
+.list-contact {
+  display: flex;
+
+  padding: 0;
+  margin: 0;
+  margin-left: auto;
+}
+
+.list-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.list-contact .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+/* .list .item:last-child {
+  margin-right: 0;
+} */
+
+/* .down-list {
+  list-style: none;
+} */
+
 .logo {
   color: currentColor;
   font-family: 'Raleway', sans-serif;
@@ -60,7 +91,11 @@ html {
   color: var(--color-brand);
 }
 
-.link {
+.list-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--color-accent);
   font-style: normal;
   font-weight: 500;
@@ -81,6 +116,10 @@ html {
 }
 
 .contacts {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--color-grey);
   font-style: normal;
   font-weight: 500;
@@ -106,9 +145,11 @@ html {
 text-align: center;
 } */
 
+/* dark section effective solutions for your buisness */
+
 .dark-section {
-margin-top: 0;
-margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 
   color: var(--color-main-bcg);
   text-decoration: none;
@@ -116,6 +157,7 @@ margin-bottom: 0;
 }
 
 .main-text {
+  padding-top: 200px;
   margin-top: 0;
   margin-bottom: 30px;
 
@@ -126,16 +168,15 @@ margin-bottom: 0;
   line-height: 1.363;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-
-  outline: 2px solid tomato;
 }
 
 .primary-button {
   display: inline-block;
-  border-radius: 4px;
   padding: 10px 32px;
+  margin-bottom: 200px;
   min-width: 152px;
   border: 1px solid transparent;
+  border-radius: 4px;
 
   color: var(--color-main-bcg);
   background-color: var(--color-brand);
@@ -155,6 +196,8 @@ margin-bottom: 0;
   background-color: var(--color-portfolio-button);
 }
 
+/* advantages: attention to details, punctuality and planning */
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -169,8 +212,9 @@ margin-bottom: 0;
 }
 
 .advantages-head {
+  padding-bottom: 50px;
   margin-top: 0;
-  margin-bottom: 50px;
+  margin-bottom: 0;
 
   color: var(--color-accent);
   font-style: normal;
@@ -192,7 +236,12 @@ margin-bottom: 0;
   margin: -1px;
 }
 
+.main-advantages-list {
+  display: flex;
+}
+
 .advantages-list {
+  padding-top: 94px;
   margin-top: 0;
   margin-bottom: 10px;
 
@@ -206,8 +255,9 @@ margin-bottom: 0;
 }
 
 .advantages-text {
+  padding-bottom: 94px;
   margin-top: 0;
-  margin-bottom: 94px;
+  margin-bottom: 0;
 
   color: var(--color-grey);
   font-style: normal;
@@ -217,8 +267,35 @@ margin-bottom: 0;
   letter-spacing: 0.03em;
 }
 
+/* what we do */
+.list-works {
+  display: flex;
+  align-content: stretch;
+  padding: 0;
+  padding-bottom: 94px;
+  margin: 0;
+}
+
+.list-works .item:not(:first-child) {
+  margin-left: 30px;
+}
+
+/* our team */
+
 .group {
   background-color: var(--color-portfolio-page-bcg);
+}
+
+.list-team {
+  display: flex;
+  align-content: stretch;
+  padding: 0;
+  padding-bottom: 94px;
+  margin: 0;
+}
+
+.list-team .li:not(:first-child) {
+  margin-left: 30px;
 }
 
 .li {
@@ -226,8 +303,8 @@ margin-bottom: 0;
 }
 
 .full-name {
-margin-top: 0;
-margin-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 10px;
 
   color: var(--color-accent);
   font-size: 16px;
@@ -237,8 +314,8 @@ margin-bottom: 10px;
 }
 
 .title-name {
-margin-top: 0;
-margin-bottom: 30px;
+  margin-top: 0;
+  margin-bottom: 30px;
 
   color: var(--color-grey);
   font-size: 16px;
@@ -278,6 +355,19 @@ margin-bottom: 30px;
 }
 
 /* portfolio */
+.list-btn {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  padding-top: 94px;
+  padding-bottom: 50px;
+  margin: 0;
+}
+
+.list-btn .item + .item {
+  margin-left: 8px;
+}
+
 .nav-button {
   display: inline-block;
   border-radius: 4px;
@@ -302,8 +392,14 @@ margin-bottom: 30px;
   background-color: var(--color-brand);
 }
 
-.list-button {
+.list-section {
   background-color: var(--color-main-bcg);
+}
+
+.list-photo {
+  display: flex;
+  flex-wrap: wrap;
+  p
 }
 
 .name-photo {

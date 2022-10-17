@@ -19,51 +19,53 @@
   </head>
 
   <body class="body">
-    <div class="container">
-      <header class="header">
+    <header class="header">
+      <div class="container main-nav">
         <a href="/index.html" class="logo"><span class="logo-blue">Web</span>Studio</a>
-        <nav class="nav">
-          <ul class="list">
-            <li><a href="./index.html" class="link">Студія</a></li>
-            <li><a href="./portfolio.html" class="link current">Портфоліо</a></li>
-            <li><a href="./index.html" class="link">Контакти</a></li>
+        <nav>
+          <ul class="list-nav">
+            <li class="item"><a href="./index.html" class="link">Студія</a></li>
+            <li class="item"><a href="./portfolio.html" class="link current">Портфоліо</a></li>
+            <li class="item"><a href="./index.html" class="link">Контакти</a></li>
           </ul>
         </nav>
-        <ul class="list">
-          <li><a href="mailto:info@devstudio.com" class="contacts">info@devstudio.com</a></li>
-          <li><a href="tel:+380961111111" class="contacts">+38 096 111 11 11</a></li>
+        <ul class="list-contact">
+          <li class="item">
+            <a href="mailto:info@devstudio.com" class="contacts">info@devstudio.com</a>
+          </li>
+          <li class="item"><a href="tel:+380961111111" class="contacts">+38 096 111 11 11</a></li>
         </ul>
-      </header>
-    </div>
+      </div>
+    </header>
     <main>
-      <div class="container">
-        <section class="list-button">
-          <h1 class="visually-hidden">Portfolio</h1>
-          <ul class="list">
-            <li><button type="button" class="nav-button">Усі</button></li>
-            <li><button type="button" class="nav-button">Веб-сайти</button></li>
-            <li><button type="button" class="nav-button">Додатки</button></li>
-            <li><button type="button" class="nav-button">Дизайн</button></li>
-            <li><button type="button" class="nav-button">Маркетинг</button></li>
-          </ul>
-          <ul class="list">
-            <li>
+      <section class="list-section">
+        <h1 class="visually-hidden">Portfolio</h1>
+        <ul class="list-btn">
+          <li class="item"><button type="button" class="nav-button">Усі</button></li>
+          <li class="item"><button type="button" class="nav-button">Веб-сайти</button></li>
+          <li class="item"><button type="button" class="nav-button">Додатки</button></li>
+          <li class="item"><button type="button" class="nav-button">Дизайн</button></li>
+          <li class="item"><button type="button" class="nav-button">Маркетинг</button></li>
+        </ul>
+
+        <div class="container">
+          <ul class="list-photo">
+            <li class="item">
               <img class="title-photo" src="./images/img4.1.jpg" alt="Технокряк" width="370" />
               <h2 class="name-photo">Технокряк</h2>
               <p class="text">Веб-сайт</p>
             </li>
-            <li>
+            <li class="item">
               <img
                 class="title-photo"
                 src="./images/img4.2.jpg"
-                alt="Постер New Orlean vs Golden
-          Star"
+                alt="Постер New Orlean vs Golden Star"
                 width="370"
               />
               <h2 class="name-photo">Постер New Orlean vs Golden Star</h2>
               <p class="text">Дизайн</p>
             </li>
-            <li>
+            <li class="item">
               <img
                 class="title-photo"
                 src="./images/img4.3.jpg"
@@ -73,17 +75,17 @@
               <h2 class="name-photo">Ресторан Seafood</h2>
               <p class="text">Додаток</p>
             </li>
-            <li>
+            <li class="item">
               <img class="title-photo" src="./images/img4.4.jpg" alt="Проєкт Prime" width="370" />
               <h2 class="name-photo">Проєкт Prime</h2>
               <p class="text">Маркетинг</p>
             </li>
-            <li>
+            <li class="item">
               <img class="title-photo" src="./images/img4.5.jpg" alt="Проєкт Boxes" width="370" />
               <h2 class="name-photo">Проєкт Boxes</h2>
               <p class="text">Додаток</p>
             </li>
-            <li>
+            <li class="item">
               <img
                 class="title-photo"
                 src="./images/img4.6.jpg"
@@ -93,7 +95,7 @@
               <h2 class="name-photo">Inspiration has no Borders</h2>
               <p class="text">Веб-сайт</p>
             </li>
-            <li>
+            <li class="item">
               <img
                 class="title-photo"
                 src="./images/img4.7.jpg"
@@ -103,12 +105,12 @@
               <h2 class="name-photo">Видання Limited Edition</h2>
               <p class="text">Дизайн</p>
             </li>
-            <li>
+            <li class="item">
               <img class="title-photo" src="./images/img4.8.jpg" alt="Проєкт LAB" width="370" />
               <h2 class="name-photo">Проєкт LAB</h2>
               <p class="text">Маркетинг</p>
             </li>
-            <li>
+            <li class="item">
               <img
                 class="title-photo"
                 src="./images/img4.9.jpg"
@@ -119,14 +121,15 @@
               <p class="text">Додаток</p>
             </li>
           </ul>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
-    <div class="container">
-      <footer class="footer">
+
+    <footer class="footer">
+      <div class="container">
         <a href="/index.html" class="down-logo"><span class="logo-blue">Web</span>Studio</a>
         <address class="address">
-          <ul class="list">
+          <ul class="down-list">
             <li>
               <a
                 class="address"
@@ -142,7 +145,7 @@
             <li><a href="tel:+380961111111" class="down-contacts">+38 096 111 11 11</a></li>
           </ul>
         </address>
-      </footer>
-    </div>
+      </div>
+    </footer>
   </body>
 </html>

@@ -20,35 +20,35 @@
   </head>
 
   <body class="body">
-    <div class="container">
-      <header class="header">
+    <header class="header">
+      <div class="container main-nav">
         <a href="/index.html" class="logo"><span class="logo-blue">Web</span>Studio</a>
-        <nav class="nav">
-          <ul class="list">
-            <li><a href="./index.html" class="link current">Студія</a></li>
-            <li><a href="./portfolio.html" class="link">Портфоліо</a></li>
-            <li><a href="./index.html" class="link">Контакти</a></li>
+        <nav>
+          <ul class="list-nav">
+            <li class="item"><a href="./index.html" class="link current">Студія</a></li>
+            <li class="item"><a href="./portfolio.html" class="link">Портфоліо</a></li>
+            <li class="item"><a href="./index.html" class="link">Контакти</a></li>
           </ul>
         </nav>
-        <ul class="list">
-          <li><a href="mailto:info@devstudio.com" class="contacts">info@devstudio.com</a></li>
-          <li><a href="tel:+380961111111" class="contacts">+38 096 111 11 11</a></li>
+        <ul class="list-contact">
+          <li class="item">
+            <a href="mailto:info@devstudio.com" class="contacts">info@devstudio.com</a>
+          </li>
+          <li class="item"><a href="tel:+380961111111" class="contacts">+38 096 111 11 11</a></li>
         </ul>
-      </header>
-    </div>
+      </div>
+    </header>
 
     <main class="main">
       <section class="dark-section">
-        <div class="container">
-          <h1 class="main-text centered">Ефективні рішення для вашого бізнесу</h1>
-          <button type="button" class="primary-button">Замовити послугу</button>
-        </div>
+        <h1 class="main-text centered">Ефективні рішення для вашого бізнесу</h1>
+        <button type="button" class="primary-button">Замовити послугу</button>
       </section>
 
-      <div class="container">
-        <section class="advantages">
+      <section class="advantages">
+        <div class="container">
           <h2 class="advantages-head visually-hidden">Переваги</h2>
-          <ul class="list">
+          <ul class="main-advantages-list">
             <li>
               <h3 class="advantages-list">УВАГА ДО ДЕТАЛЕЙ</h3>
               <p class="advantages-text">
@@ -74,14 +74,14 @@
               </p>
             </li>
           </ul>
-        </section>
-      </div>
+        </div>
+      </section>
 
-      <div class="container">
-        <section class="what-we-do">
+      <section class="what-we-do">
+        <div class="container">
           <h2 class="advantages-head">Чим ми займаємося</h2>
-          <ul class="list">
-            <li>
+          <ul class="list-works">
+            <li class="item">
               <img
                 src="./images/img.2.1.jpg"
                 alt="site markup"
@@ -91,7 +91,7 @@
               />
             </li>
 
-            <li>
+            <li class="item">
               <img
                 src="./images/img.2.2.jpg"
                 alt="creating a convenient layout"
@@ -101,7 +101,7 @@
               />
             </li>
 
-            <li>
+            <li class="item">
               <img
                 src="./images/img.2.3.jpg"
                 alt="selection of colors"
@@ -111,12 +111,13 @@
               />
             </li>
           </ul>
-        </section>
-      </div>
-      <div class="container">
-        <section class="group">
+        </div>
+      </section>
+
+      <section class="group">
+        <div class="container">
           <h2 class="advantages-head">Наша команда</h2>
-          <ul class="list">
+          <ul class="list-team">
             <li class="li">
               <img
                 src="./images/img.3.1.jpg"
@@ -161,14 +162,14 @@
               <p class="title-name">UI Designer</p>
             </li>
           </ul>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
     <div class="container">
       <footer class="footer">
         <a href="/index.html" class="down-logo"><span class="logo-blue">Web</span>Studio</a>
         <address class="address">
-          <ul class="list">
+          <ul class="down-list">
             <li>
               <a
                 class="address"
