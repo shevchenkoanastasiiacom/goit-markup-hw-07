@@ -151,7 +151,7 @@ text-align: center;
 .section.hero {
   padding-top: 200px;
   padding-bottom: 200px;
-    text-align: center;
+  text-align: center;
 
   color: var(--color-main-bcg);
   text-decoration: none;
@@ -249,7 +249,6 @@ text-align: center;
   display: flex;
 }
 
-
 .item.gap-list:not(:last-child) {
   margin-right: 30px;
 }
@@ -314,6 +313,9 @@ text-align: center;
 
 .list-team .item {
   background-color: var(--color-main-bcg);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+      border-radius: 0px 0px 4px 4px;
 }
 
 .item.item.group-name {
@@ -324,7 +326,7 @@ text-align: center;
 }
 
 .full-name {
-margin: 0 0 10px 0;
+  margin: 0 0 10px 0;
   color: var(--color-accent);
   font-size: 16px;
   font-weight: 500;
@@ -339,8 +341,6 @@ margin: 0 0 10px 0;
   line-height: 1.171;
   letter-spacing: 0.03em;
 }
-
-
 
 /* portfolio */
 .list-btn {
@@ -392,7 +392,7 @@ margin: 0 0 10px 0;
   width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
-  border: 1px solid var(--color-border-portfolio) ;
+  border: 1px solid var(--color-border-portfolio);
 }
 
 .list-photo .item:nth-child(3n) {
@@ -433,8 +433,8 @@ margin: 0 0 10px 0;
 /* footer */
 
 .footer {
-    padding-top: 60px;
-      padding-bottom: 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 
   background-color: var(--color-secondary-bcg);
 }
@@ -453,7 +453,7 @@ margin: 0 0 10px 0;
 }
 
 .address-list {
-margin-top: 20px;
+  margin-top: 20px;
 }
 
 .address {
@@ -483,7 +483,6 @@ margin-top: 20px;
 /* .down-list .item:first-child {}
 
 .down-list .item:last-child {} */
-
 
 .container .down-list {
   padding-left: 0;
