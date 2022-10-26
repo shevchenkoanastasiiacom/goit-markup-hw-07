@@ -20,10 +20,10 @@
   </head>
 
   <body class="body">
-    <header class="header">
+    <header class="header-nav">
       <div class="container main-nav">
         <a href="/index.html" class="logo"><span class="logo-blue">Web</span>Studio</a>
-        <nav>
+        <nav class="list-nav-item">
           <ul class="list-nav">
             <li class="item"><a href="./index.html" class="link current">Студія</a></li>
             <li class="item"><a href="./portfolio.html" class="link">Портфоліо</a></li>
@@ -40,34 +40,36 @@
     </header>
 
     <main class="main">
-      <section class="dark-section">
-        <h1 class="main-text centered">Ефективні рішення для вашого бізнесу</h1>
-        <button type="button" class="primary-button">Замовити послугу</button>
+      <section class="section hero">
+        <div class="container">
+          <h1 class="main-text centered">Ефективні рішення для вашого бізнесу</h1>
+          <button type="button" class="primary-button">Замовити послугу</button>
+        </div>
       </section>
 
-      <section class="advantages">
+      <section class="section advantages">
         <div class="container">
           <h2 class="advantages-head visually-hidden">Переваги</h2>
           <ul class="main-advantages-list">
-            <li>
+            <li class="item gap-list">
               <h3 class="advantages-list">УВАГА ДО ДЕТАЛЕЙ</h3>
               <p class="advantages-text">
                 Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.
               </p>
             </li>
-            <li>
+            <li class="item gap-list">
               <h3 class="advantages-list">ПУНКТУАЛЬНІСТЬ</h3>
               <p class="advantages-text">
                 Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.
               </p>
             </li>
-            <li>
+            <li class="item gap-list">
               <h3 class="advantages-list">ПЛАНУВАННЯ</h3>
               <p class="advantages-text">
                 Так само консультація з широким активом значною мірою зумовлює.
               </p>
             </li>
-            <li>
+            <li class="item gap-list">
               <h3 class="advantages-list">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
               <p class="advantages-text">
                 Значимість цих проблем настільки очевидна, що реалізація планових завдань.
@@ -77,12 +79,13 @@
         </div>
       </section>
 
-      <section class="what-we-do">
+      <section class="section what-we-do">
         <div class="container">
           <h2 class="advantages-head">Чим ми займаємося</h2>
           <ul class="list-works">
             <li class="item">
               <img
+                class="img"
                 src="./images/img.2.1.jpg"
                 alt="site markup"
                 width="370"
@@ -93,6 +96,7 @@
 
             <li class="item">
               <img
+                class="img"
                 src="./images/img.2.2.jpg"
                 alt="creating a convenient layout"
                 width="370"
@@ -103,6 +107,7 @@
 
             <li class="item">
               <img
+                class="img"
                 src="./images/img.2.3.jpg"
                 alt="selection of colors"
                 width="370"
@@ -114,52 +119,64 @@
         </div>
       </section>
 
-      <section class="group">
+      <section class="section group">
         <div class="container">
           <h2 class="advantages-head">Наша команда</h2>
           <ul class="list-team">
-            <li class="li">
+            <li class="item">
               <img
+                class="img"
                 src="./images/img.3.1.jpg"
                 alt="Ігор Дем'яненко,Product Designer"
                 width="270"
                 height="260"
                 class="photo"
               />
-              <h3 class="full-name">Ігор Дем'яненко</h3>
-              <p class="title-name">Product Designer</p>
+              <div class="item group-name">
+                <h3 class="full-name">Ігор Дем'яненко</h3>
+                <p class="title-name">Product Designer</p>
+              </div>
             </li>
-            <li class="li">
+            <li class="item">
               <img
+                class="img"
                 src="./images/img.3.2.jpg"
                 alt="Ольга Рєпіна, Frontend Developer"
                 width="270"
                 height="260"
                 class="photo"
               />
-              <h3 class="full-name">Ольга Рєпіна</h3>
-              <p class="title-name">Frontend Developer</p>
+              <div class="item group-name">
+                <h3 class="full-name">Ольга Рєпіна</h3>
+                <p class="title-name">Frontend Developer</p>
+              </div>
             </li>
-            <li class="li">
+            <li class="item">
               <img
+                class="img"
                 src="./images/img.3.3.jpg"
                 alt="Микола Тарасов, Marketing"
                 width="270"
                 height="260"
               />
-              <h3 class="full-name">Микола Тарасов</h3>
-              <p class="title-name">Marketing</p>
+              <div class="item group-name">
+                <h3 class="full-name">Микола Тарасов</h3>
+                <p class="title-name">Marketing</p>
+              </div>
             </li>
-            <li class="li">
+            <li class="item">
               <img
+                class="img"
                 src="./images/img.3.4.jpg"
                 alt="Михайло Єрмаков, UI Designer"
                 width="270"
                 height="260"
                 class="photo"
               />
-              <h3 class="full-name">Михайло Єрмаков</h3>
-              <p class="title-name">UI Designer</p>
+              <div class="item group-name">
+                <h3 class="full-name">Михайло Єрмаков</h3>
+                <p class="title-name">UI Designer</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -169,7 +186,7 @@
     <footer class="footer">
       <div class="container">
         <a href="/index.html" class="down-logo"><span class="logo-blue">Web</span>Studio</a>
-        <address class="address">
+        <address class="address-list">
           <ul class="down-list">
             <li class="item">
               <a
