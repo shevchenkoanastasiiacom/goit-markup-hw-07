@@ -12,6 +12,9 @@
   --color-border-bottom-header: rgba(236, 236, 236, 1);
   --color-border-portfolio: rgba(238, 238, 238, 1);
   --color-primary-button-shadow: rgba(0, 0, 0, 0.15);
+  --color-linear-gradient-hero: rgba(47, 48, 58, 0.4);
+  --color-border-clients: rgba(175, 177, 184, 1);
+  --color-subscr-icon-bcg: rgba(255, 255, 255, 0.1);
 }
 html {
   box-sizing: border-box;
@@ -149,14 +152,43 @@ text-align: center;
 
 /* dark section effective solutions for your buisness */
 
+/* .overlay {
+  max-width: 1600px;
+    min-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient (to right,
+        var(--color-linear-gradient-hero),
+        var(--color-linear-gradient-hero));
+    background: url(../images/img.hero.1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+} */
+
 .section.hero {
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
+  /* fill: solid #c4c4c4; */
 
   color: var(--color-main-bcg);
   text-decoration: none;
   background-color: var(--color-secondary-bcg);
+
+  max-width: 1600px;
+  min-height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(
+      to right,
+      var(--color-linear-gradient-hero),
+      var(--color-linear-gradient-hero)
+    ),
+    url('../images/img.hero.1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .main-text {
@@ -178,10 +210,8 @@ text-align: center;
 .primary-button {
   display: inline-block;
   padding: 10px 32px;
-
   min-width: 152px;
   border: 1px solid transparent;
-  border-radius: 4px;
 
   color: var(--color-main-bcg);
   background-color: var(--color-brand);
@@ -253,6 +283,20 @@ text-align: center;
 
 .item.gap-list:not(:last-child) {
   margin-right: 30px;
+}
+
+.advantages-img {
+  display: block;
+  margin-bottom: 30px;
+  content: '';
+  width: 270px;
+  height: 120px;
+  background-color: var(--color-portfolio-button-hover);
+  border-radius: 4px;
+}
+
+.advantages-icon {
+  margin: 25px 100px;
 }
 
 .advantages-list {
@@ -342,6 +386,38 @@ text-align: center;
   font-size: 16px;
   line-height: 1.171;
   letter-spacing: 0.03em;
+}
+
+/* clients */
+
+.main-clients-list {
+  display: flex;
+}
+
+.main-clients-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-img {
+  display: block;
+  content: '';
+  width: 170px;
+  height: 92px;
+  fill: var(--color-border-clients);
+  background-color: var(--color-main-bcg);
+  border: 1px solid var(--color-border-clients);
+  border-radius: 4px;
+    cursor: pointer;
+}
+
+.clients-icon {
+  margin: 16px 32px;
+}
+
+.clients-img:hover ,
+.clients-img:focus {
+fill: var(--color-brand);
+border: 1px solid var(--color-brand);
 }
 
 /* portfolio */
@@ -457,6 +533,7 @@ text-align: center;
 }
 
 .address-list {
+  display: flex;
   margin-top: 20px;
 }
 
@@ -509,5 +586,41 @@ text-align: center;
 .down-contacts:focus {
   color: var(--color-brand);
 }
+
+
+.subscribe {
+  color: var(--color-main-bcg);
+  font-style: normal;
+    font-weight: 700;
+      line-height: 1.142;
+      letter-spacing: 0.03em;
+      text-decoration: none;
+      text-transform: uppercase;
+}
+
+.subscribe-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.subscribe-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  fill: var(--color-main-bcg);
+  background-color: var(--color-subscr-icon-bcg);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.subscribe-link:hover , 
+.subscribe-link:focus {
+  fill: var(--color-main-bcg);
+  background-color: var(--color-brand);
+}
+
 
 /* end */
