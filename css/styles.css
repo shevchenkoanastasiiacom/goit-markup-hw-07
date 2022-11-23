@@ -16,6 +16,7 @@
   --color-border-clients: rgba(175, 177, 184, 1);
   --color-subscr-icon-bcg: rgba(255, 255, 255, 0.1);
   --color-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --color-bcg-overlay: rgba(0, 0, 0, 0.2);
 }
 
 html {
@@ -128,11 +129,13 @@ ul {
 .current::after {
   content: "";
   position: absolute;
-  display: block;
+  display: inline-block;
   margin-top: 28px;
 
   width: 100%;
   height: 4px;
+  left: 0;
+  bottom: -2px;
   border-radius: 2px;
   background-color: var(--color-brand);
 
@@ -154,6 +157,8 @@ ul {
   letter-spacing: 0.02em;
   text-decoration: none;
   cursor: pointer;
+
+  transition: color 250ms var(--color-function);
 }
 
 .contacts:hover,
@@ -255,8 +260,6 @@ text-align: center;
   font-size: 16px;
   line-height: 1.875;
   letter-spacing: 0.06em;
-  cursor: pointer;
-  box-shadow: 0px 4px 4px var(--color-primary-button-shadow);
   border-radius: 4px;
 
 
@@ -268,6 +271,8 @@ text-align: center;
 .primary-button:focus {
   color: var(--color-main-bcg);
   background-color: var(--color-portfolio-button);
+    box-shadow: 0px 4px 4px var(--color-primary-button-shadow);
+      cursor: pointer;
 }
 
 /* modal */
@@ -277,7 +282,7 @@ text-align: center;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: var(--color-bcg-overlay);
   opacity: 1;
   transition: opacity 250ms var(--color-function),
     visibility 250ms var(--color-function);
@@ -330,7 +335,6 @@ text-align: center;
   width: 11px;
   height: 11px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  
 }
 
 /* advantages: attention to details, punctuality and planning */
@@ -536,6 +540,9 @@ text-align: center;
   background-color: var(--color-subscr-icon-bcg);
   border-radius: 50%;
   cursor: pointer;
+  transition: background-color 250ms var(--color-function),
+      box-shadow 250ms var(--color-function),
+      fill 250ms var(--color-function)
 }
 
 .social-link:hover,
@@ -604,6 +611,11 @@ border: 1px solid var(--color-brand);
   line-height: 1.625;
   letter-spacing: 0.03em;
   cursor: pointer;
+
+  transition: color 250ms var(--color-function),
+  background-color 250ms var(--color-function),
+  box-shadow 250ms var(--color-function),
+  filter 250ms var(--color-function);
 }
 .nav-button:hover,
 .nav-button:focus {
@@ -650,6 +662,46 @@ border: 1px solid var(--color-brand);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+
+.link-backdrop {
+  position: relative;
+  overflow: hidden;
+}
+
+.link-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-brand);
+
+  opacity: 0.9;
+  transform: translateY(100%);
+  transition: transform 250ms var(--color-function);
+}
+
+.link-backdrop:hover::after {
+  transform: translateY(0);
+}
+
+.photo-link:hover .link-box {
+  transform: translateY(0);
+}
+
+.link-text {
+  padding: 63px 24px;
+
+  font-size: 18px;
+  line-height: 1.55;
+
+  letter-spacing: 0.03em;
+  color: var(--color-main-bcg);
+}
+
+.link-text:hover {
+  transform: translateY(0);
+}
 
 .portfolio.photo-text {
   padding: 20px 24px;
@@ -726,6 +778,7 @@ border: 1px solid var(--color-brand);
   letter-spacing: 0.03em;
   text-decoration: none;
   cursor: pointer;
+  transition: color 250ms var(--color-function);
 }
 
 .address:hover,
@@ -760,6 +813,8 @@ border: 1px solid var(--color-brand);
   letter-spacing: 0.03em;
   text-decoration: none;
   cursor: pointer;
+
+  transition: color 250ms var(--color-function);
 }
 
 .down-contacts:hover,
@@ -798,10 +853,15 @@ margin-left: 70px;
   justify-content: center;
   width: 44px;
   height: 44px;
-  fill: var(--color-main-bcg);
-  background-color: var(--color-subscr-icon-bcg);
+
   border-radius: 50%;
   cursor: pointer;
+  fill: var(--color-main-bcg);
+  background-color: var(--color-subscr-icon-bcg);
+  transition: color 250ms var(--color-function),
+      background-color 250ms var(--color-function),
+      box-shadow 250ms var(--color-function),
+      filter 250ms var(--color-function);
 }
 
 .subscribtion-link:hover , 
