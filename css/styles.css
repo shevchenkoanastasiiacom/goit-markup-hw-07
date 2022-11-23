@@ -573,6 +573,12 @@ text-align: center;
   border: 1px solid var(--color-border-clients);
   border-radius: 4px;
     cursor: pointer;
+    transition: color 250ms var(--color-function),
+    border 250ms var(--color-function),
+    fill 250ms var(--color-function),
+    box-shadow 250ms var(--color-function),
+    background-color 250ms var(--color-function),
+    filter 250ms var(--color-function);
 }
 
 /* .clients-icon {
