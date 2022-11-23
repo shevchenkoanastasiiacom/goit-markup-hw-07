@@ -15,6 +15,7 @@
   --color-linear-gradient-hero: rgba(47, 48, 58, 0.4);
   --color-border-clients: rgba(175, 177, 184, 1);
   --color-subscr-icon-bcg: rgba(255, 255, 255, 0.1);
+  --color-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 html {
@@ -99,7 +100,6 @@ ul {
 }
 
 .list-nav .link {
-  display: block;
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -111,6 +111,9 @@ ul {
   letter-spacing: 0.02em;
   text-decoration: none;
   cursor: pointer;
+
+  position: relative;
+  transition: color 250ms var(--color-function);
 }
 
 .link:hover,
@@ -121,6 +124,21 @@ ul {
 .link.current {
   color: var(--color-brand);
 }
+
+.current::after {
+  content: "";
+  position: absolute;
+  display: block;
+  margin-top: 28px;
+
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--color-brand);
+
+  transition: opacity 250ms var(--color-function);
+}
+
 
 .contacts {
   display: flex;
@@ -222,8 +240,10 @@ text-align: center;
 }
 
 .primary-button {
-  display: inline-block;
+  display: block;
   padding: 10px 32px;
+    margin-right: auto;
+      margin-left: auto;
   min-width: 152px;
   border: 1px solid transparent;
 
@@ -238,12 +258,79 @@ text-align: center;
   cursor: pointer;
   box-shadow: 0px 4px 4px var(--color-primary-button-shadow);
   border-radius: 4px;
+
+
+  transition: background-color 250ms var(--color-function),
+      box-shadow 250ms var(--color-function);
 }
 
 .primary-button:hover,
 .primary-button:focus {
   color: var(--color-main-bcg);
   background-color: var(--color-portfolio-button);
+}
+
+/* modal */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 250ms var(--color-function),
+    visibility 250ms var(--color-function);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scaleX(0.1);
+}
+
+.modal {
+  position: relative;
+  top: 50%;
+  left: 50%;
+
+  height: 581px;
+  width: 528px;
+  background-color: var(--color-main-bcg);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+
+  transform: translate(-50%, -50%) scaleX(1);
+  transition: transform 250ms var(--color-function);
+}
+
+.modal-button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 8px;
+  right: 8px;
+  padding: 9px 9px 10px 10px;
+  width: 30px;
+  height: 30px;
+
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: var(--color-main-bcg);
+
+}
+
+.modal-icon {
+  width: 11px;
+  height: 11px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  
 }
 
 /* advantages: attention to details, punctuality and planning */
@@ -351,6 +438,29 @@ text-align: center;
 
 .list-works .item:not(:first-child) {
   margin-left: 30px;
+}
+
+.position-works {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.element-works {
+  position: absolute;
+  width: 370px;
+  padding: 27px 107px;
+  border: none;
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+
+  text-transform: uppercase;
+  white-space: nowrap;
+  ;
+  background: rgba(47, 48, 58, 0.8);
+  color: #FFFFFF;
 }
 
 .img {

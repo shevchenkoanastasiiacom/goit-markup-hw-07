@@ -56,7 +56,7 @@
       <section class="section hero">
         <div class="container">
           <h1 class="main-text centered">Ефективні рішення для вашого бізнесу</h1>
-          <button type="button" class="primary-button">Замовити послугу</button>
+          <button type="button" data-modal-open class="primary-button">Замовити послугу</button>
         </div>
       </section>
       <!-- </div> -->
@@ -118,36 +118,53 @@
           <h2 class="advantages-head">Чим ми займаємося</h2>
           <ul class="list-works">
             <li class="item">
-              <img
-                class="img"
-                src="./images/img.2.1.jpg"
-                alt="site markup"
-                width="370"
-                height="294"
-                class="photo"
-              />
+              <div class="position-works">
+                <div class="element-works">
+                  <p>десктопні додатки</p>
+                </div>
+                <img
+                  class="img"
+                  src="./images/img.2.1.jpg"
+                  alt="site markup"
+                  width="370"
+                  height="294"
+                  class="photo"
+                />
+              </div>
             </li>
 
             <li class="item">
-              <img
-                class="img"
-                src="./images/img.2.2.jpg"
-                alt="creating a convenient layout"
-                width="370"
-                height="294"
-                class="photo"
-              />
+              <div class="position-works">
+                <div class="element-works">
+                  <p>мобільні додатки</p>
+                </div>
+
+                <img
+                  class="img"
+                  src="./images/img.2.2.jpg"
+                  alt="creating a convenient layout"
+                  width="370"
+                  height="294"
+                  class="photo"
+                />
+              </div>
             </li>
 
             <li class="item">
-              <img
-                class="img"
-                src="./images/img.2.3.jpg"
-                alt="selection of colors"
-                width="370"
-                height="294"
-                class="photo"
-              />
+              <div class="position-works">
+                <div class="element-works">
+                  <p>дизайнерські рішення</p>
+                </div>
+
+                <img
+                  class="img"
+                  src="./images/img.2.3.jpg"
+                  alt="selection of colors"
+                  width="370"
+                  height="294"
+                  class="photo"
+                />
+              </div>
             </li>
           </ul>
         </div>
@@ -446,5 +463,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-button" data-modal-close type="button">
+          <svg class="modal-icon">
+            <use href="./images/icons.svg#icon-close-modal"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
