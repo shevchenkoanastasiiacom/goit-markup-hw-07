@@ -749,7 +749,7 @@ transform: translateY(0);
   transform: translateY(0);
 }
 
-.photo-link:hover .link-box {
+.photo-link:hover .link-box  - was div in html which cover p link text{
   transform: translateY(0);
 }
 .photo-link:focus .link-box {
