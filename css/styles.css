@@ -114,7 +114,9 @@ ul {
   cursor: pointer;
 
   position: relative;
-  transition: color 250ms var(--color-function);
+  transition-property: color, background-color, shadow;
+  transition-duration: 250ms;
+  transition-timing-function: var(--color-function);
 }
 
 .link:hover,
@@ -130,12 +132,12 @@ ul {
   content: "";
   position: absolute;
   display: inline-block;
-  margin-top: 28px;
+  /* margin-top: 28px; */
 
   width: 100%;
   height: 4px;
   left: 0;
-  bottom: -2px;
+  bottom: -1px;
   border-radius: 2px;
   background-color: var(--color-brand);
 
@@ -158,7 +160,9 @@ ul {
   text-decoration: none;
   cursor: pointer;
 
-  transition: color 250ms var(--color-function);
+  transition-property: color, background-color, shadow;
+    transition-duration: 250ms;
+    transition-timing-function: var(--color-function);
 }
 
 .contacts:hover,
@@ -171,6 +175,10 @@ fill: currentColor;
 margin-right: 10px;
 min-width: 16px;
 min-height: 12px;
+
+  transition-property: color, background-color, shadow;
+    transition-duration: 250ms;
+    transition-timing-function: var(--color-function);
 }
 
 .contact-icon:hover,
@@ -263,8 +271,9 @@ text-align: center;
   border-radius: 4px;
 
 
-  transition: background-color 250ms var(--color-function),
-      box-shadow 250ms var(--color-function);
+  transition-property: color, background-color, shadow;
+    transition-duration: 250ms;
+    transition-timing-function: var(--color-function);
 }
 
 .primary-button:hover,
@@ -452,9 +461,14 @@ text-align: center;
 }
 
 .element-works {
+display: flex;
+align-items: center;
+justify-content: center;
+
   position: absolute;
-  width: 370px;
-  padding: 27px 107px;
+  width: 100%;
+  height: 70px;
+  /* padding: 27px 107px; */
   border: none;
   font-weight: 700;
   line-height: 1.14;
@@ -465,6 +479,10 @@ text-align: center;
   ;
   background: rgba(47, 48, 58, 0.8);
   color: #FFFFFF;
+}
+
+.element-text {
+  margin: 0;
 }
 
 .img {
@@ -540,9 +558,9 @@ text-align: center;
   background-color: var(--color-subscr-icon-bcg);
   border-radius: 50%;
   cursor: pointer;
-  transition: background-color 250ms var(--color-function),
-      box-shadow 250ms var(--color-function),
-      fill 250ms var(--color-function)
+  transition-property: fill, background-color, shadow;
+    transition-duration: 250ms;
+    transition-timing-function: var(--color-function);
 }
 
 .social-link:hover,
@@ -573,12 +591,24 @@ text-align: center;
   border: 1px solid var(--color-border-clients);
   border-radius: 4px;
     cursor: pointer;
-  transition: fill 250ms var(--timing-function) , border-color 250ms var(--timing-function);
-}
+    transition-property: fill, border, color;
+      transition-duration: 250ms;
+      transition-timing-function: var(--color-function);
+  }
+
 
 /* .clients-icon {
-  margin: 16px 32px;
+  fill: var(--color-border-clients);
+      transition-property: fill;
+        transition-duration: 250ms;
+        transition-timing-function: var(--color-function);
+
+}
+.clients-icon:hover,
+.clients-icon:focus {
+  fill: var(--color-brand);
 } */
+
 
 .clients-img:hover ,
 .clients-img:focus {
@@ -613,10 +643,9 @@ border: 1px solid var(--color-brand);
   letter-spacing: 0.03em;
   cursor: pointer;
 
-  transition: color 250ms var(--color-function),
-  background-color 250ms var(--color-function),
-  box-shadow 250ms var(--color-function),
-  filter 250ms var(--color-function);
+  transition-property: color, background-color, shadow, filter;
+    transition-duration: 250ms;
+    transition-timing-function: var(--color-function);
 }
 .nav-button:hover,
 .nav-button:focus {
@@ -656,6 +685,7 @@ border: 1px solid var(--color-brand);
 .photo-link {
   display: block;
   text-decoration: none;
+  transition: box-shadow 250ms var(--color-function);
 }
 
 .photo-link:hover,
@@ -663,8 +693,38 @@ border: 1px solid var(--color-brand);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
+.link-thumb {
+  position: relative;
+  overflow: hidden;
+}
 
-.link-backdrop {
+.link-text {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: var(--color-brand);
+opacity: 0.9;
+transform: translateY(100%);
+  padding: 63px 24px;
+  margin: 0;
+  
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    color: var(--color-main-bcg);
+    transition: transform 250ms var(--color-function);
+}
+
+.link-thumb:hover .link-text{
+  transform: translateY(0);
+}
+.link-thumb:focus .link-text{
+transform: translateY(0);
+}
+
+/* .link-thumb {
   position: relative;
   overflow: hidden;
 }
@@ -682,11 +742,17 @@ border: 1px solid var(--color-brand);
   transition: transform 250ms var(--color-function);
 }
 
-.link-backdrop:hover::after {
+.link-thumb:hover::after {
+  transform: translateY(0);
+}
+.link-thumb:focus::after {
   transform: translateY(0);
 }
 
 .photo-link:hover .link-box {
+  transform: translateY(0);
+}
+.photo-link:focus .link-box {
   transform: translateY(0);
 }
 
@@ -702,7 +768,7 @@ border: 1px solid var(--color-brand);
 
 .link-text:hover {
   transform: translateY(0);
-}
+} */
 
 .portfolio.photo-text {
   padding: 20px 24px;
@@ -779,7 +845,9 @@ border: 1px solid var(--color-brand);
   letter-spacing: 0.03em;
   text-decoration: none;
   cursor: pointer;
-  transition: color 250ms var(--color-function);
+  transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--color-function);
 }
 
 .address:hover,
@@ -815,7 +883,9 @@ border: 1px solid var(--color-brand);
   text-decoration: none;
   cursor: pointer;
 
-  transition: color 250ms var(--color-function);
+  transition-property: color
+    transition-duration: 250ms;
+    transition-timing-function: var(--color-function);
 }
 
 .down-contacts:hover,
@@ -858,11 +928,9 @@ margin-left: 70px;
   border-radius: 50%;
   cursor: pointer;
   fill: var(--color-main-bcg);
-  background-color: var(--color-subscr-icon-bcg);
-  transition: color 250ms var(--color-function),
-      background-color 250ms var(--color-function),
-      box-shadow 250ms var(--color-function),
-      filter 250ms var(--color-function);
+  transition-property: color, background-color, shadow, filter;
+    transition-duration: 250ms;
+    transition-timing-function: var(--color-function);
 }
 
 .subscribtion-link:hover , 
