@@ -17,6 +17,7 @@
   --color-subscr-icon-bcg: rgba(255, 255, 255, 0.1);
   --color-function: cubic-bezier(0.4, 0, 0.2, 1);
   --color-bcg-overlay: rgba(0, 0, 0, 0.2);
+  --color-form-field: rgba(117, 117, 117, 0.5);
 }
 
 html {
@@ -311,7 +312,7 @@ text-align: center;
   position: relative;
   top: 50%;
   left: 50%;
-
+padding: 40px;
   height: 581px;
   width: 528px;
   background-color: var(--color-main-bcg);
@@ -344,6 +345,171 @@ text-align: center;
   width: 18px;
   height: 18px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/* Modal form */
+.form-text {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: 0.03em;
+
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.form-field label {
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: var(--color-grey);
+}
+
+.form-field-box {
+  position: relative;
+  height: 40px;
+  fill: var(--color-accent);
+}
+
+.form-field input {
+  padding: 12px 12px 12px 42px;
+  width: 100%;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 250ms var(--color-function);
+}
+
+.form-field input:focus {
+  border-color: var(--color-brand);
+}
+
+.form-field-box:focus-within .form-field-icon {
+  fill: var(--color-brand);
+}
+
+.form-field-icon {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+
+  transform: translateY(-50%);
+  transition: fill 250ms var(--color-function);
+}
+
+
+.form-field textarea {
+  padding: 12px 16px;
+  height: 120px;
+
+  outline: none;
+  resize: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+
+  transition: border-color 250ms var(--color-function);
+}
+
+.form-field textarea:focus {
+  border-color: var(--color-brand);
+}
+
+.form-field::placeholder {
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+
+  color: var(--color-form-field);
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+}
+
+.form-field-end {
+  margin-bottom: 20px;
+}
+
+.form-checkbox {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.form-checkbox input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  position: absolute;
+}
+
+.form-checkbox label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+
+  color: var(--color-grey);
+}
+
+.checkbox-border {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 15px;
+
+  border: 2px solid var(--color-accent);
+  border-radius: 3px;
+  fill: transparent;
+}
+
+.checkbox-input:checked+.checkbox-border {
+  border: none;
+  fill: var(--color-main-bcg);
+  background-color: var(--color-brand);
+}
+
+.form-checkbox-link {
+  color: var(--color-brand);
+}
+
+.form-checkbox-icon {
+  width: 11px;
+  height: 8px;
+}
+
+.form-button {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 52px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+
+  letter-spacing: 0.06em;
+  color: var(--color-main-bcg);
+  background-color: var(--color-brand);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  cursor: pointer;
+  border: none;
+  /* transition: background-color 250ms var(--color-function), 
+               box-shadow 250ms var(--color-function); */
 }
 
 /* advantages: attention to details, punctuality and planning */
@@ -811,7 +977,8 @@ transform: translateY(0);
 
 .container.footer-list {
   display: flex;
-  align-items: baseline;
+    align-items: baseline;
+    justify-content: space-between;
 }
 
 .address .footer-list {
@@ -939,5 +1106,67 @@ margin-left: 70px;
   background-color: var(--color-brand);
 }
 
+/* leave your Email footer */
+
+.sign-text {
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--color-main-bcg);
+}
+
+.sign-form {
+  display: flex;
+  margin-top: 20px;
+}
+
+.sign-box input {
+  display: block;
+  width: 358px;
+  height: 50px;
+  margin-right: 12px;
+  padding: 15px 0 15px 16px;
+
+  color: var(--color-main-bcg);
+  background-color: var(--color-secondary-bcg);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+}
+
+.sign-box input::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+
+  color: var(--color-down-contacts);
+}
+
+.sign-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+  width: 200px;
+  padding: 10px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  color: var(--color-main-bcg);
+  background-color: var(--color-brand);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+}
+
+.sign-icon {
+  fill: var(--color-main-bcg);
+}
 
 /* end */
