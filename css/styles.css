@@ -1061,12 +1061,12 @@ transform: translateY(0);
 }
 
 .subscribtion {
-margin-left: 70px;
+
 }
 
 .subscribtion-head {
-    margin-top: 0;
-    margin-bottom: 20px;
+  display: flex;
+  margin: 0;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.143;
@@ -1076,7 +1076,11 @@ margin-left: 70px;
 }
 
 .subscribtion-list {
+
   display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
   gap: 10px;
 }
 
@@ -1093,6 +1097,7 @@ margin-left: 70px;
   height: 44px;
 
   border-radius: 50%;
+  outline: none;
   cursor: pointer;
   fill: var(--color-main-bcg);
   transition-property: color, background-color, shadow, filter;
