@@ -883,11 +883,8 @@ transform: translateY(100%);
     transition: transform 250ms var(--color-function);
 }
 
-.link-thumb:hover .link-text{
+.photo-link:hover .link-text , .photo-link:focus .link-text{
   transform: translateY(0);
-}
-.link-thumb:focus .link-text{
-transform: translateY(0);
 }
 
 /* .link-thumb {
@@ -1100,6 +1097,7 @@ transform: translateY(0);
   outline: none;
   cursor: pointer;
   fill: var(--color-main-bcg);
+  background-color: var(--color-subscr-icon-bcg);
   transition-property: color, background-color, shadow, filter;
     transition-duration: 250ms;
     transition-timing-function: var(--color-function);
