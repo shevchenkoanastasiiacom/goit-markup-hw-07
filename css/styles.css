@@ -1019,8 +1019,8 @@ transform: translateY(100%);
     transition-timing-function: var(--color-function);
 }
 
-.address:hover,
-.address:focus {
+.address-link:hover,
+.address-link:focus {
   color: var(--color-brand);
 }
 
