@@ -309,7 +309,7 @@ text-align: center;
 }
 
 .modal {
-  position: relative;
+  position: absolute;
   top: 50%;
   left: 50%;
 padding: 40px;
@@ -345,6 +345,11 @@ padding: 40px;
   width: 18px;
   height: 18px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  fill: var(--color-primary);
+}
+
+.modal-icon:hover , .modal-icon:focus {
+  fill: var(--color-brand);
 }
 
 /* Modal form */
@@ -975,11 +980,11 @@ transform: translateY(100%);
 .container.footer-list {
   display: flex;
     align-items: baseline;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
-.address .footer-list {
-  display: flex;
+.address.footer-list {
+  margin-right: 70px;
 }
 
 .down-logo {
@@ -1000,7 +1005,7 @@ transform: translateY(100%);
   margin-top: 20px;
 }
 
-.address {
+.address-link {
   color: var(--color-main-bcg);
   font-style: normal;
   font-weight: 400;
@@ -1058,7 +1063,7 @@ transform: translateY(100%);
 }
 
 .subscribtion {
-
+margin-right: 93px;
 }
 
 .subscribtion-head {
