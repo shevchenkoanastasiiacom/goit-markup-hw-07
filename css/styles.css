@@ -31,17 +31,16 @@ html {
   line-height: 1.714;
   background-color: var(--color-main-bcg);
 }
-
-/* header */
-
-.header-nav {
-  border-bottom: 1px solid var(--color-border-bottom-header);
-}
-
 ul {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+/* header */
+
+.header {
+  border-bottom: 1px solid var(--color-border-bottom-header);
 }
 
 .container {
@@ -52,42 +51,13 @@ ul {
   margin-right: auto;
 }
 
-.container.main-nav {
+.main__nav {
   display: flex;
   align-items: center;
 }
 
-.list-nav-item {
-  margin-left: 93px;
-}
-
-.list-nav {
-  display: flex;
-}
-
-.list-contact {
-  display: flex;
-  margin-left: auto;
-}
-
-.list-nav .item:not(:last-child) {
-  margin-right: 50px;
-}
-
-.list-contact .item:not(:last-child) {
-  margin-right: 50px;
-}
-
-/* .list .item:last-child {
-  margin-right: 0;
-} */
-
-/* .down-list {
-  list-style: none;
-} */
-
 .logo {
-  color: currentColor;
+  color: var(--color-brand);
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -97,11 +67,33 @@ ul {
   text-decoration: none;
 }
 
-.logo-blue {
-  color: var(--color-brand);
+.logo__dark {
+  color: var(--color-primary);
 }
 
-.list-nav .link {
+.nav {
+  margin-left: 93px;
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+
+/* .list .item:last-child {
+  margin-right: 0;
+} */
+
+/* .down-list {
+  list-style: none;
+} */
+
+
+.nav__link {
   padding-top: 32px;
   padding-bottom: 32px;
 
@@ -120,16 +112,16 @@ ul {
   transition-timing-function: var(--color-function);
 }
 
-.link:hover,
-.link:focus {
+.nav__link:hover,
+.nav__link:focus {
   color: var(--color-brand);
 }
 
-.link.current {
+.nav__link--current {
   color: var(--color-brand);
 }
 
-.current::after {
+.nav__link--current::after {
   content: "";
   position: absolute;
   display: inline-block;
@@ -145,8 +137,16 @@ ul {
   transition: opacity 250ms var(--color-function);
 }
 
+.contact {
+  display: flex;
+  margin-left: auto;
+}
 
-.contacts {
+.contact__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contact__link {
   display: flex;
   align-items: center;
   padding-top: 32px;
@@ -166,24 +166,24 @@ ul {
     transition-timing-function: var(--color-function);
 }
 
-.contacts:hover,
-.contacts:focus {
+.contact__link:hover,
+.contact__link:focus {
   color: var(--color-brand);
 }
 
-.contact-icon {
+.contact__icon {
 fill: currentColor;
 margin-right: 10px;
 min-width: 16px;
 min-height: 12px;
 
-  transition-property: color, background-color, shadow;
-    transition-duration: 250ms;
-    transition-timing-function: var(--color-function);
+transition-property: color, background-color, shadow;
+transition-duration: 250ms;
+transition-timing-function: var(--color-function);
 }
 
-.contact-icon:hover,
-.contact-icon:focus {
+.contact__icon:hover,
+.contact__icon:focus {
   fill: var(--color-brand);
 }
 
@@ -213,6 +213,11 @@ text-align: center;
     background-size: cover;
 } */
 
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .section.hero {
   padding-top: 200px;
   padding-bottom: 200px;
@@ -237,7 +242,7 @@ text-align: center;
   background-size: cover;
 }
 
-.main-text {
+.hero-title {
   margin-top: 0;
   margin-bottom: 30px;
   margin-left: auto;
@@ -532,11 +537,6 @@ padding: 40px;
   margin: -1px;
 }
 
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
 .advantages-head {
   margin-top: 0;
   margin-bottom: 50px;
@@ -825,9 +825,9 @@ border: 1px solid var(--color-brand);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.section.list {
+/* .section.list {
   background-color: var(--color-main-bcg);
-}
+} */
 
 .list-photo {
   display: flex;
@@ -988,7 +988,7 @@ transform: translateY(100%);
   flex-grow: 1;
 }
 
-.down-logo {
+/* .down-logo {
   display: flex;
 
   color: var(--color-main-bcg);
@@ -999,6 +999,10 @@ transform: translateY(100%);
   line-height: 1.192;
   letter-spacing: 0.03em;
   text-decoration: none;
+} */
+
+.logo__light {
+  color: var(--color-main-bcg);
 }
 
 .address-list {

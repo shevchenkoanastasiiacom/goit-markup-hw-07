@@ -19,28 +19,34 @@
   </head>
 
   <body class="body">
-    <header class="header-nav">
-      <div class="container main-nav">
-        <a href="/index.html" class="logo"><span class="logo-blue">Web</span>Studio</a>
-        <nav class="list-nav-item">
-          <ul class="list-nav">
-            <li class="item"><a href="./index.html" class="link current">Студія</a></li>
-            <li class="item"><a href="./portfolio.html" class="link">Портфоліо</a></li>
-            <li class="item"><a href="./index.html" class="link">Контакти</a></li>
+    <header class="header">
+      <div class="container main__nav">
+        <a href="/index.html" class="logo">Web<span class="logo__dark">Studio</span></a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="./index.html" class="nav__link nav__link--current">Студія</a>
+            </li>
+            <li class="nav__item">
+              <a href="./portfolio.html" class="nav__link">Портфоліо</a>
+            </li>
+            <li class="nav__item">
+              <a href="./index.html" class="nav__link">Контакти</a>
+            </li>
           </ul>
         </nav>
-        <ul class="list-contact">
-          <li class="item">
-            <a href="mailto:info@devstudio.com" class="contacts">
-              <svg class="contact-icon" width="16" height="12">
+        <ul class="contact">
+          <li class="contact__item">
+            <a href="mailto:info@devstudio.com" class="contact__link">
+              <svg class="contact__icon" width="16" height="12">
                 <use href="./images/icons.svg#icon-envelope"></use>
               </svg>
               info@devstudio.com
             </a>
           </li>
           <li class="item">
-            <a href="tel:+380961111111" class="contacts">
-              <svg class="contact-icon" width="10" height="16">
+            <a href="tel:+380961111111" class="contact__link">
+              <svg class="contact__icon" width="10" height="16">
                 <use href="./images/icons.svg#icon-smartphone"></use>
               </svg>
               +38 096 111 11 11
@@ -54,7 +60,7 @@
       <!-- <div class="overlay"> -->
       <section class="section hero">
         <div class="container">
-          <h1 class="main-text centered">Ефективні рішення для вашого бізнесу</h1>
+          <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
           <button type="button" data-modal-open class="primary-button">Замовити послугу</button>
         </div>
       </section>
@@ -406,7 +412,7 @@
     <footer class="footer">
       <div class="container footer-list">
         <div class="address footer-list">
-          <a href="/index.html" class="down-logo"><span class="logo-blue">Web</span>Studio</a>
+          <a href="/index.html" class="logo">Web<span class="logo__light">Studio</span></a>
           <address class="address-list">
             <ul class="down-list">
               <li class="item">
