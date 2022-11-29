@@ -985,6 +985,7 @@ transform: translateY(100%);
 
 .address.footer-list {
   margin-right: 70px;
+  flex-grow: 1;
 }
 
 .down-logo {
