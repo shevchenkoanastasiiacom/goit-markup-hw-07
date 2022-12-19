@@ -242,7 +242,7 @@ text-align: center;
   background-size: cover;
 }
 
-.hero-title {
+.hero__title {
   margin-top: 0;
   margin-bottom: 30px;
   margin-left: auto;
@@ -258,7 +258,7 @@ text-align: center;
   text-transform: uppercase;
 }
 
-.hero-button {
+.hero__button {
   display: block;
   padding: 10px 32px;
     margin-right: auto;
@@ -282,8 +282,8 @@ text-align: center;
     transition-timing-function: var(--color-function);
 }
 
-.hero-button:hover,
-.hero-button:focus {
+.hero__button:hover,
+.hero__button:focus {
   color: var(--color-main-bcg);
   background-color: var(--color-portfolio-button);
     box-shadow: 0px 4px 4px var(--color-hero-button-shadow);
@@ -303,13 +303,13 @@ text-align: center;
     visibility 250ms var(--color-function);
 }
 
-.backdrop.is-hidden {
+.backdrop.is__hidden {
   opacity: 0;
   pointer-events: none;
   visibility: hidden;
 }
 
-.backdrop.is-hidden .modal {
+.backdrop.is__hidden .modal {
   transform: translate(-50%, -50%) scaleX(0.1);
 }
 
