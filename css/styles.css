@@ -328,7 +328,7 @@ padding: 40px;
   transition: transform 250ms var(--color-function);
 }
 
-.modal-button {
+.modal__button {
   position: absolute;
   display: flex;
   justify-content: center;
@@ -346,19 +346,19 @@ padding: 40px;
 
 }
 
-.modal-icon {
+.modal__icon {
   width: 18px;
   height: 18px;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   fill: var(--color-primary);
 }
 
-.modal-icon:hover , .modal-icon:focus {
+.modal__icon:hover , .modal__icon:focus {
   fill: var(--color-brand);
 }
 
 /* Modal form */
-.form-text {
+.client__data {
   display: flex;
   justify-content: center;
   margin-bottom: 12px;
@@ -369,13 +369,13 @@ padding: 40px;
 
 }
 
-.form-field {
+.form__field {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px;
 }
 
-.form-field label {
+.form__field label {
   margin-bottom: 4px;
 
   font-size: 12px;
@@ -385,13 +385,13 @@ padding: 40px;
   color: var(--color-grey);
 }
 
-.form-field-box {
+.form__box {
   position: relative;
   height: 40px;
   fill: var(--color-accent);
 }
 
-.form-field input {
+.form__field input {
   padding: 12px 12px 12px 42px;
   width: 100%;
 
@@ -401,15 +401,15 @@ padding: 40px;
   transition: border-color 250ms var(--color-function);
 }
 
-.form-field input:focus {
+.form__field input:focus {
   border-color: var(--color-brand);
 }
 
-.form-field-box:focus-within .form-field-icon {
+.form__box:focus-within .form__icon {
   fill: var(--color-brand);
 }
 
-.form-field-icon {
+.form__icon {
   position: absolute;
   top: 50%;
   left: 15px;
@@ -419,7 +419,7 @@ padding: 40px;
 }
 
 
-.form-field textarea {
+.form__field textarea {
   padding: 12px 16px;
   height: 120px;
 
@@ -431,11 +431,11 @@ padding: 40px;
   transition: border-color 250ms var(--color-function);
 }
 
-.form-field textarea:focus {
+.form__field textarea:focus {
   border-color: var(--color-brand);
 }
 
-.form-field::placeholder {
+.form__field::placeholder {
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
@@ -445,7 +445,7 @@ padding: 40px;
   border-radius: 4px;
 }
 
-.form-field-end {
+.form__end {
   margin-bottom: 20px;
 }
 
