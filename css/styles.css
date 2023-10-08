@@ -13,7 +13,7 @@
   --color-border-portfolio: rgba(238, 238, 238, 1);
   --color-hero-button-shadow: rgba(0, 0, 0, 0.15);
   --color-linear-gradient-hero: rgba(47, 48, 58, 0.4);
-  --color-border-clients: rgba(175, 177, 184, 1);
+  --color-border-client: rgba(175, 177, 184, 1);
   --color-subscr-icon-bcg: rgba(255, 255, 255, 0.1);
   --color-function: cubic-bezier(0.4, 0, 0.2, 1);
   --color-bcg-overlay: rgba(0, 0, 0, 0.2);
@@ -218,7 +218,7 @@ text-align: center;
   padding-bottom: 94px;
 }
 
-.section.hero {
+.hero {
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
@@ -524,6 +524,7 @@ padding: 40px;
 
 /* advantages: attention to details, punctuality and planning */
 
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -612,7 +613,7 @@ padding: 40px;
 
 /* what we do */
 
-.section.service {
+.service {
   padding-top: 0;
 }
 
@@ -717,7 +718,7 @@ justify-content: center;
   text-align: center;
 }
 
-.full-name {
+.full__name {
   margin: 0 0 10px 0;
   color: var(--color-accent);
   font-size: 16px;
@@ -726,7 +727,7 @@ justify-content: center;
   letter-spacing: 0.03em;
 }
 
-.role-name {
+.role__name {
   margin: 0 0 16px 0;
   color: var(--color-grey);
   font-size: 16px;
@@ -734,25 +735,25 @@ justify-content: center;
   letter-spacing: 0.03em;
 }
 
-.social-list {
+.social__list {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
 
 
-/* .social-item .icon {
-  fill: var(---color-border-clients);
+/* .social__item .icon {
+  fill: var(---color-border-client);
 } */
 
-.social-link {
+.social__link {
   display: flex;
   align-items: center;
   justify-content: center;
   
   width: 44px;
   height: 44px;
-  fill: var(--color-border-clients);
+  fill: var(--color-border-client);
   background-color: var(--color-subscr-icon-bcg);
   border-radius: 50%;
   cursor: pointer;
@@ -761,32 +762,45 @@ justify-content: center;
   transition-timing-function: var(--color-function);
 }
 
-.social-link:hover,
-.social-link:focus {
+.social__link:hover,
+.social__link:focus {
   fill: var(--color-main-bcg);
   background-color: var(--color-brand);
 }
 
-/* clients */
+/* client */
 
-.main-clients-list {
+.client__title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  text-align: center;
+
+  color: var(--color-accent);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.166;
+  letter-spacing: 0.03em;
+}
+
+.client__list {
   display: flex;
 }
 
-.main-clients-list .item:not(:last-child) {
+.client__list .item:not(:last-child) {
   margin-right: 30px;
 }
 
-.clients-img {
+.client__img {
   display: flex;
   align-items: center;
   justify-content: center;
   content: '';
   width: 170px;
   height: 92px;
-  fill: var(--color-border-clients);
+  fill: var(--color-border-client);
   background-color: var(--color-main-bcg);
-  border: 1px solid var(--color-border-clients);
+  border: 1px solid var(--color-border-client);
   border-radius: 4px;
     cursor: pointer;
     transition-property: fill, border, color;
@@ -794,22 +808,20 @@ justify-content: center;
       transition-timing-function: var(--color-function);
   }
 
-
-/* .clients-icon {
-  fill: var(--color-border-clients);
+/* .client__icon {
+  fill: var(--color-border-client);
       transition-property: fill;
         transition-duration: 250ms;
         transition-timing-function: var(--color-function);
 
 }
-.clients-icon:hover,
-.clients-icon:focus {
+.client-icon:hover,
+.client-icon:focus {
   fill: var(--color-brand);
 } */
 
-
-.clients-img:hover ,
-.clients-img:focus {
+.client__img:hover ,
+.client__img:focus {
 fill: var(--color-brand);
 border: 1px solid var(--color-brand);
 }
@@ -1004,13 +1016,22 @@ transform: translateY(100%);
   background-color: var(--color-secondary-bcg);
 }
 
-.container.footer-list {
+.footer__container {
   display: flex;
-    align-items: baseline;
-    /* justify-content: space-between; */
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: baseline;
 }
 
-.address.footer-list {
+/* .container.footer-list {
+  display: flex;
+    align-items: baseline;
+    /* justify-content: space-between; }*/
+
+.footer__address {
   margin-right: 70px;
   flex-grow: 1;
 }
@@ -1032,12 +1053,12 @@ transform: translateY(100%);
   color: var(--color-main-bcg);
 }
 
-.address-list {
+.address__list {
   display: flex;
   margin-top: 20px;
 }
 
-.address-link {
+.address__link {
   color: var(--color-main-bcg);
   font-style: normal;
   font-weight: 400;
@@ -1051,16 +1072,16 @@ transform: translateY(100%);
     transition-timing-function: var(--color-function);
 }
 
-.address-link:hover,
-.address-link:focus {
+.address__link:hover,
+.address__link:focus {
   color: var(--color-brand);
 }
 
-.down-list .item {
+.bottom__item {
   display: flex;
 }
 
-.down-list .item:not(:last-child) {
+.bottom__item:not(:last-child) {
   margin-bottom: 9px;
 }
 
@@ -1068,13 +1089,13 @@ transform: translateY(100%);
 
 .down-list .item:last-child {} */
 
-.container .down-list {
+.bottom__list {
   padding-left: 0;
   margin-top: 0;
   margin-bottom: 0;
 }
 
-.down-contacts {
+.bottom__contacts {
   color: var(--color-down-contacts);
   font-style: normal;
   font-weight: 400;
@@ -1089,8 +1110,8 @@ transform: translateY(100%);
     transition-timing-function: var(--color-function);
 }
 
-.down-contacts:hover,
-.down-contacts:focus {
+.bottom__contacts:hover,
+.bottom__contacts:focus {
   color: var(--color-brand);
 }
 
@@ -1098,7 +1119,7 @@ transform: translateY(100%);
 margin-right: 93px;
 }
 
-.subscribtion-head {
+.subscribtion__head {
   display: flex;
   margin: 0;
     font-weight: 700;
@@ -1109,7 +1130,7 @@ margin-right: 93px;
   color: var(--color-main-bcg);
 }
 
-.subscribtion-list {
+.subscribtion__list {
 
   display: flex;
   align-items: center;
@@ -1119,11 +1140,11 @@ margin-right: 93px;
 }
 
 
-.subscribtion-item .icon {
+.subscribtion__icon {
   fill: var(--color-main-bcg);
 }
 
-.subscribtion-link {
+.subscribtion__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1136,12 +1157,12 @@ margin-right: 93px;
   fill: var(--color-main-bcg);
   background-color: var(--color-subscr-icon-bcg);
   transition-property: color, background-color, shadow, filter;
-    transition-duration: 250ms;
-    transition-timing-function: var(--color-function);
+  transition-duration: 250ms;
+  transition-timing-function: var(--color-function);
 }
 
-.subscribtion-link:hover , 
-.subscribtion-link:focus {
+.subscribtion__link:hover , 
+.subscribtion__link:focus {
   fill: var(--color-brand);
   background-color: var(--color-brand);
 }
