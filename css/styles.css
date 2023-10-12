@@ -1169,7 +1169,7 @@ margin-right: 93px;
 
 /* leave your Email footer */
 
-.sign-text {
+.sign__text {
   font-weight: 700;
   line-height: 1.14;
   letter-spacing: 0.03em;
@@ -1178,12 +1178,12 @@ margin-right: 93px;
   color: var(--color-main-bcg);
 }
 
-.sign-form {
+.sign__form {
   display: flex;
   margin-top: 20px;
 }
 
-.sign-box input {
+.sign__box input {
   display: block;
   width: 358px;
   height: 50px;
@@ -1197,7 +1197,7 @@ margin-right: 93px;
   border-radius: 4px;
 }
 
-.sign-box input::placeholder {
+.sign__box input::placeholder {
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
@@ -1205,7 +1205,7 @@ margin-right: 93px;
   color: var(--color-down-contacts);
 }
 
-.sign-button {
+.sign__button {
   position: relative;
   display: flex;
   align-items: center;
@@ -1226,7 +1226,7 @@ margin-right: 93px;
   border: none;
 }
 
-.sign-icon {
+.sign__icon {
   fill: var(--color-main-bcg);
 }
 
